@@ -1,6 +1,6 @@
 /**
  * LUMEN Contact Form — Google Apps Script Web App
- * Deploy como: Ejecutar como "yo", Acceso "Cualquiera"
+ * Deploy como: "Ejecutar como: yo", "Acceso: Cualquiera"
  * 
  * Recibe POST desde lumen-lux.github.io/lumen-site
  * Reenvía a proyecto.lumen.lux@gmail.com
@@ -10,6 +10,7 @@ function doPost(e) {
   try {
     const data = e.parameter;
     const name = data.name || "Anónimo";
+    const email = data.email || "(no especificado)";
     const subject = data.subject || "General";
     const message = data.message || "(sin mensaje)";
 
@@ -17,6 +18,7 @@ function doPost(e) {
       "Nuevo contacto desde lumen-site",
       "",
       "Nombre: " + name,
+      "Email: " + email,
       "Asunto: " + subject,
       "",
       "Mensaje:",

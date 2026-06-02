@@ -429,6 +429,9 @@
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Your name" required>
 
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
     <label for="subject">Subject</label>
     <select id="subject" name="subject" required>
         <option value="">Select one</option>
@@ -460,6 +463,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({
                 name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             })
