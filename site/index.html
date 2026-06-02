@@ -330,7 +330,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     status.textContent = '';
     status.className = 'form-status';
     try {
-        const resp = await fetch('SCRIPT_URL_HERE', {
+        const resp = await fetch('https://script.google.com/macros/s/AKfycbxNmGWK9d_no4h2Mi7KxcY_CW6i2Sol7m1M3tz7G-toJltH-hhq30tJRMnx1dvu0d-A/exec', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({
